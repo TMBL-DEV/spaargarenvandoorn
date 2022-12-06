@@ -7,6 +7,7 @@ import {
   useServerAnalytics,
   useLocalization,
   useShopQuery,
+  Image,
 } from '@shopify/hydrogen';
 
 import {MEDIA_FRAGMENT, PRODUCT_CARD_FRAGMENT} from '~/lib/fragments';
@@ -66,9 +67,20 @@ function HomepageContent() {
 
   return (
     <>
-      {primaryHero && (
-        <Hero {...primaryHero} height="full" top loading="eager" />
-      )}
+      <Image
+        widths={[986]}
+        height="486"
+        alt="Marketing Banner Image"
+        className="block object-cover w-full h-full"
+        // @ts-ignore
+        data={{
+          width: 986,
+          height: 486,
+          url: 'http://localhost:3000/src/assets/some-random-4k-wordpress-item-cropped.jpg',
+        }}
+        width="986"
+        loaderOptions={{crop: 'center'}}
+      />
       <ProductSwimlane
         data={featuredProducts.nodes}
         title="Featured Products"

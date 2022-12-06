@@ -2,15 +2,15 @@ import {defineConfig, CookieSessionStorage} from '@shopify/hydrogen/config';
 
 export default defineConfig({
   shopify: {
-    defaultCountryCode: 'US',
-    defaultLanguageCode: 'EN',
+    defaultCountryCode: 'NL',
+    defaultLanguageCode: 'nl',
     storeDomain:
       // @ts-ignore
-      Oxygen?.env?.PUBLIC_STORE_DOMAIN || 'hydrogen-preview.myshopify.com',
+      Oxygen?.env?.PUBLIC_STORE_DOMAIN || 'spaargarenvandoorn.myshopify.com',
     storefrontToken:
       // @ts-ignore
       Oxygen?.env?.PUBLIC_STOREFRONT_API_TOKEN ||
-      '3b580e70970c4528da70c98e097c2fa0',
+      'ecfeb6dda12b44ff4f215dabd7a5da6e',
     privateStorefrontToken:
       // @ts-ignore
       Oxygen?.env?.PRIVATE_STOREFRONT_API_TOKEN,
